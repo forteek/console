@@ -1,0 +1,21 @@
+{
+    "name": "forteek/console",
+    "description": "A PHP library addressing all your CLI needs.",
+    "type": "library",
+    "version": "0.1",
+    "autoload": {
+        "psr-4": {
+            "Fortek\\Console\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcin Fortuniak",
+            "email": "fortgeek@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-ctype": "*",
+        "ext-readline": "*"
+    }
+}
