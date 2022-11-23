@@ -2,6 +2,7 @@
     "name": "forteek/console",
     "description": "A PHP library addressing all your CLI needs.",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Fortek\\Console\\": "src/"
