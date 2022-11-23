@@ -69,11 +69,10 @@ class BbcodeParser implements Parser
             $match = preg_match('/\[(\/?\w+(?:=[\w\d]+(?:,[\w|\d]+)*)?)\]([^\[]*)/', $input, $tag);
         }
 
-        $result = [];
-        foreach ($serializationQueue as $state) {
-            $result[] = $this->stateSerializer->serialize($state);
-        }
-
+        $result = array_map(
+            fn (State $state) => $this->stateSerializer->serialize($state),
+            $serializationQueue
+        );
 
         return implode('', $result);
     }
